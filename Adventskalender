@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #b22222;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #228b22;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Willkommen im Adventskalender!</h1>
+    <p>Gib den Code aus Türchen 1 ein:</p>
+    <input type="text" id="code" placeholder="Code eingeben">
+    <button onclick="checkCode()">Absenden</button>
+    <p id="result"></p>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('code').value;
+            if (code === "1234") {
+                document.getElementById('result').textContent = "Richtig! Weiter so!";
+            } else {
+                document.getElementById('result').textContent = "Falscher Code, versuche es nochmal.";
+            }
+        }
+    </script>
+</body>
+</html>
